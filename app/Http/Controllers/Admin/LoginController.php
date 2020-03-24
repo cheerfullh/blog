@@ -62,4 +62,8 @@ class LoginController extends Controller
         session()->flush();
         return view('admin/login');
     }
+    public function noaccess(){
+        return view('noaccess');
+    }
+
 }

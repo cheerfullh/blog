@@ -3,22 +3,46 @@
         <ul id="nav">
             <li>
                 <a href="javascript:;">
-                    <i class="iconfont left-nav-li" lay-tips="会员管理">&#xe6b8;</i>
-                    <cite>会员管理</cite>
+                    <i class="iconfont left-nav-li" lay-tips="管理员管理">&#xe726;</i>
+                    <cite>管理员管理</cite>
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('会员列表','{{url('admin/user')}}')">
+                        <a onclick="xadmin.add_tab('管理员列表','{{url('admin/user')}}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员列表</cite></a>
+                            <cite>管理员列表</cite></a>
                     </li>
                     <li>
-                        <a onclick="xadmin.add_tab('会员删除','{{url('admin/delete')}}')">
+                        <a onclick="xadmin.add_tab('角色管理','{{url('admin/role')}}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>会员删除</cite></a>
+                            <cite>角色管理</cite></a>
+                    </li>
+                    <li>
+                        <a onclick="xadmin.add_tab('权限管理','{{url('admin/permission')}}')">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>权限管理</cite></a>
                     </li>
                 </ul>
             </li>
+
+{{--            <li>--}}
+{{--                <a href="javascript:;">--}}
+{{--                    <i class="iconfont left-nav-li" lay-tips="会员管理">&#xe6b8;</i>--}}
+{{--                    <cite>会员管理</cite>--}}
+{{--                    <i class="iconfont nav_right">&#xe697;</i></a>--}}
+{{--                <ul class="sub-menu">--}}
+{{--                    <li>--}}
+{{--                        <a onclick="xadmin.add_tab('会员列表','{{url('admin/user')}}')">--}}
+{{--                            <i class="iconfont">&#xe6a7;</i>--}}
+{{--                            <cite>会员列表</cite></a>--}}
+{{--                    </li>--}}
+{{--                    <li>--}}
+{{--                        <a onclick="xadmin.add_tab('会员删除','{{url('admin/delete')}}')">--}}
+{{--                            <i class="iconfont">&#xe6a7;</i>--}}
+{{--                            <cite>会员删除</cite></a>--}}
+{{--                    </li>--}}
+{{--                </ul>--}}
+{{--            </li>--}}
             <li>
                 <a href="javascript:;">
                     <i class="iconfont left-nav-li" lay-tips="订单管理">&#xe723;</i>
@@ -44,9 +68,9 @@
                     <i class="iconfont nav_right">&#xe697;</i></a>
                 <ul class="sub-menu">
                     <li>
-                        <a onclick="xadmin.add_tab('多级分类','cate.html')">
+                        <a onclick="xadmin.add_tab('多级分类','{{url('admin/cate')}}')">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>多级分类</cite></a>
+                            <cite>分类列表</cite></a>
                     </li>
                 </ul>
             </li>
@@ -63,34 +87,7 @@
                     </li>
                 </ul>
             </li>
-            <li>
-                <a href="javascript:;">
-                    <i class="iconfont left-nav-li" lay-tips="管理员管理">&#xe726;</i>
-                    <cite>管理员管理</cite>
-                    <i class="iconfont nav_right">&#xe697;</i></a>
-                <ul class="sub-menu">
-                    <li>
-                        <a onclick="xadmin.add_tab('管理员列表','admin-list.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>管理员列表</cite></a>
-                    </li>
-                    <li>
-                        <a onclick="xadmin.add_tab('角色管理','admin-role.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>角色管理</cite></a>
-                    </li>
-                    <li>
-                        <a onclick="xadmin.add_tab('权限分类','admin-cate.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>权限分类</cite></a>
-                    </li>
-                    <li>
-                        <a onclick="xadmin.add_tab('权限管理','admin-rule.html')">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>权限管理</cite></a>
-                    </li>
-                </ul>
-            </li>
+
             <li>
                 <a href="javascript:;">
                     <i class="iconfont left-nav-li" lay-tips="系统统计">&#xe6ce;</i>

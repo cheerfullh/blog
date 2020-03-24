@@ -20,24 +20,24 @@
                                 <div class="layui-input-inline">
                                     <select name="num" lay-filter="aihao">
                                         {{--<option value=""></option>--}}
-                                        <option value="3" @if($request->input('num')==3) selected    @endif>3</option>
-                                        <option value="5" @if($request->input('num')==5) selected    @endif>5</option>
+{{--                                        <option value="3" @if($request->input('num')==3) selected    @endif>3</option>--}}
+{{--                                        <option value="5" @if($request->input('num')==5) selected    @endif>5</option>--}}
                                     </select>
                                 </div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <input type="text" name="username"  value="{{$request->input('username')}}"  placeholder="请输入用户名" autocomplete="off" class="layui-input">
-                                </div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <input type="text" name="email"  value="{{$request->input('email')}}"placeholder="请输入邮箱" autocomplete="off" class="layui-input">
-                                </div>
-                                <div class="layui-inline layui-show-xs-block">
-                                    <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>
-                                </div>
+{{--                                <div class="layui-inline layui-show-xs-block">--}}
+{{--                                    <input type="text" name="username"  value="{{$request->input('username')}}"  placeholder="请输入用户名" autocomplete="off" class="layui-input">--}}
+{{--                                </div>--}}
+{{--                                <div class="layui-inline layui-show-xs-block">--}}
+{{--                                    <input type="text" name="email"  value="{{$request->input('email')}}"placeholder="请输入邮箱" autocomplete="off" class="layui-input">--}}
+{{--                                </div>--}}
+{{--                                <div class="layui-inline layui-show-xs-block">--}}
+{{--                                    <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i></button>--}}
+{{--                                </div>--}}
                             </form>
                         </div>
                         <div class="layui-card-header">
                             <button class="layui-btn layui-btn-danger" onclick="delAll()"><i class="layui-icon"></i>批量删除</button>
-                            <button class="layui-btn" onclick="xadmin.open('添加用户','{{url('admin/user/create')}}',600,400)"><i class="layui-icon"></i>添加</button>
+                            <button class="layui-btn" onclick="xadmin.open('添加用户','{{url('admin/cate/create')}}',600,400)"><i class="layui-icon"></i>添加</button>
                         </div>
                         <div class="layui-card-body layui-table-body layui-table-main">
                             <table class="layui-table layui-form">
@@ -54,39 +54,39 @@
                                     <th>操作</th></tr>
                                 </thead>
                                 <tbody>
-                                @foreach($user as $v)
-                                  <tr>
-                                    <td>
-                                      <input type="checkbox" name="id" value="{{$v->user_id}}"   lay-skin="primary">
-                                    </td>
-                                    <td>{{$v->user_id}}</td>
-                                    <td>{{$v->user_name}}</td>
-                                    <td>{{$v->email}}</td>
-                                    <td class="td-status">
-                                      <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>
-                                    <td class="td-manage">
-                                      <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">
-                                        <i class="layui-icon">&#xe601;</i>
-                                      </a>
-                                      <a title="编辑"  onclick="xadmin.open('编辑','{{url('admin/user/'.$v->user_id.'/edit')}}',600,400)" href="javascript:;">
-                                        <i class="layui-icon">&#xe642;</i>
-                                      </a>
-                                      <a onclick="xadmin.open('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">
-                                        <i class="layui-icon">&#xe631;</i>
-                                      </a>
-                                      <a title="删除" onclick="member_del(this,'{{$v->user_id}}')" href="javascript:;">
-                                        <i class="layui-icon">&#xe640;</i>
-                                      </a>
-                                    </td>
-                                  </tr>
-                                    @endforeach
+{{--                                @foreach($user as $v)--}}
+{{--                                  <tr>--}}
+{{--                                    <td>--}}
+{{--                                      <input type="checkbox" name="id" value="{{$v->user_id}}"   lay-skin="primary">--}}
+{{--                                    </td>--}}
+{{--                                    <td>{{$v->user_id}}</td>--}}
+{{--                                    <td>{{$v->user_name}}</td>--}}
+{{--                                    <td>{{$v->email}}</td>--}}
+{{--                                    <td class="td-status">--}}
+{{--                                      <span class="layui-btn layui-btn-normal layui-btn-mini">已启用</span></td>--}}
+{{--                                    <td class="td-manage">--}}
+{{--                                      <a onclick="member_stop(this,'10001')" href="javascript:;"  title="启用">--}}
+{{--                                        <i class="layui-icon">&#xe601;</i>--}}
+{{--                                      </a>--}}
+{{--                                      <a title="编辑"  onclick="xadmin.open('编辑','{{url('admin/user/'.$v->user_id.'/edit')}}',600,400)" href="javascript:;">--}}
+{{--                                        <i class="layui-icon">&#xe642;</i>--}}
+{{--                                      </a>--}}
+{{--                                      <a onclick="xadmin.open('修改密码','member-password.html',600,400)" title="修改密码" href="javascript:;">--}}
+{{--                                        <i class="layui-icon">&#xe631;</i>--}}
+{{--                                      </a>--}}
+{{--                                      <a title="删除" onclick="member_del(this,'{{$v->user_id}}')" href="javascript:;">--}}
+{{--                                        <i class="layui-icon">&#xe640;</i>--}}
+{{--                                      </a>--}}
+{{--                                    </td>--}}
+{{--                                  </tr>--}}
+{{--                                    @endforeach--}}
                                 </tbody>
                             </table>
                         </div>
                         <div class="layui-card-body ">
                             <div class="page">
                                 <div>
-                                    {!! $user->appends($request->all())->render() !!}
+{{--                                    {!! $user->appends($request->all())->render() !!}--}}
                                 </div>
                             </div>
                         </div>
